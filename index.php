@@ -8,11 +8,6 @@ $container = require __DIR__.'/bootstrap.php';
 
 use App\Entity\User;
 
-
-echo $twig->render('homepage.html.twig', [
-    'title' => 'Homepage',
-]);
-
 /** @var \Doctrine\ORM\EntityManager $em */
 $em = $container->get('doctrine');
 
@@ -28,7 +23,7 @@ $admin = $userRepository->findOneBy(['username' => 'admin']);
 $articleRepository = $container->get('doctrine.repository.article');
 
 /** @var \App\Entity\Article $article */
-$article = $articleRepository->find(4);
+$article = $articleRepository->findAll();
 dump($article);
 dump($admin);
 
@@ -38,3 +33,6 @@ dump($article);
 
 $em->flush();
 */
+
+
+

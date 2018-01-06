@@ -64,5 +64,13 @@ $container
     ->setFactory([new Reference('doctrine'), 'getRepository'])
     ->addArgument(User::class);
 
+
+$loader = new Twig_Loader_Filesystem(__DIR__ . '/templates');
+$twig   = new Twig_Environment($loader, [
+    'cache' => false,
+]);
+
 return $container;
+
+
 
