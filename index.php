@@ -1,9 +1,17 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 /** @var \Symfony\Component\DependencyInjection\ContainerBuilder $container */
 $container = require __DIR__.'/bootstrap.php';
 
 use App\Entity\User;
+
+
+echo $twig->render('homepage.html.twig', [
+    'title' => 'Homepage',
+]);
 
 /** @var \Doctrine\ORM\EntityManager $em */
 $em = $container->get('doctrine');

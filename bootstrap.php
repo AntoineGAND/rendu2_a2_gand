@@ -65,3 +65,4 @@ $container
     ->addArgument(User::class);
 
 return $container;
+
