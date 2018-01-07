@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 /** @var \Symfony\Component\DependencyInjection\ContainerBuilder $container */
 $container = require __DIR__.'/bootstrap.php';
 

@@ -34,5 +34,3 @@ dump($article);
 $em->flush();
 */
 
-
-
